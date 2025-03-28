@@ -25,7 +25,8 @@ class PowerUp {
     update() {
         this.pos.add(this.vel);
         this.bobAmount += this.bobSpeed;
-        if (this.pos.y > SCREEN_HEIGHT + this.size) {
+        // Use p5's height variable
+        if (this.pos.y > height + this.size) {
             this.isDead = true;
         }
     }
