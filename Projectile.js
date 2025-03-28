@@ -24,17 +24,12 @@ class Projectile {
     }
 
     update() {
-        // Add current position to trail
-        this.trail.push(this.pos.copy());
-        if (this.trail.length > this.trailLength) {
-            this.trail.shift(); // Remove oldest point
-        }
-
+        // ... trail logic ...
         this.pos.add(this.vel);
 
-        // Check if off-screen (add a small buffer)
-        return (this.pos.x < -this.size || this.pos.x > SCREEN_WIDTH + this.size ||
-            this.pos.y < -this.size || this.pos.y > SCREEN_HEIGHT + this.size);
+        // Check if off-screen using p5's width and height
+        return (this.pos.x < -this.size || this.pos.x > width + this.size ||
+            this.pos.y < -this.size || this.pos.y > height + this.size);
     }
 
     draw() {

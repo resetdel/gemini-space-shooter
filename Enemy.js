@@ -49,8 +49,8 @@ class Enemy {
             this.hitTimer--;
         }
 
-        // Check if off-screen (bottom)
-        if (this.pos.y > SCREEN_HEIGHT + this.size * 2) { // Added buffer
+        // Check if off-screen (bottom) using p5's height
+        if (this.pos.y > height + this.size * 2) { // Added buffer
             this.isDead = true; // Mark for removal, no points awarded
         }
     }
@@ -162,9 +162,10 @@ class Weaver extends Enemy {
 
     move(player) {
         this.pos.y += this.baseYVel;
-        this.pos.x = (SCREEN_WIDTH / 2) + sin(this.pos.y * this.weaveFrequency) * this.weaveAmplitude;
-        // Keep within horizontal bounds slightly
-        this.pos.x = constrain(this.pos.x, this.size, SCREEN_WIDTH - this.size);
+        // Use p5's width variable
+        this.pos.x = (width / 2) + sin(this.pos.y * this.weaveFrequency) * this.weaveAmplitude;
+        // Use p5's width variable
+        this.pos.x = constrain(this.pos.x, this.size, width - this.size);
     }
 
     shoot(player) {
@@ -247,9 +248,9 @@ class MiniCruiser extends Enemy {
 
     move(player) {
         this.pos.add(this.vel);
-        // Add slight side-to-side drift
         this.pos.x += cos(frameCount * 0.02 + this.pos.y * 0.05) * 0.5;
-        this.pos.x = constrain(this.pos.x, this.size, SCREEN_WIDTH - this.size);
+        // Use p5's width variable
+        this.pos.x = constrain(this.pos.x, this.size, width - this.size);
     }
 
     shoot(player) {
