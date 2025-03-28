@@ -1,6 +1,8 @@
 # gemini-space-shooter
 Gemini Space Shooter (P5.js)
 
+[Live version]([https://resetdel.github.io/space-enemies/](https://resetdel.github.io/gemini-space-shooter/))
+
 1. Introduction
 
 1.1. Project Overview: This document outlines the requirements for a 2D top-down space shooter game developed using the P5.js library. The game will feature classic arcade-style gameplay (ship control, shooting enemies, dodging projectiles) but with a strong emphasis on high visual polish, dynamic effects, and smooth performance.
