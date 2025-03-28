@@ -1,7 +1,7 @@
 # gemini-space-shooter
 Gemini Space Shooter (P5.js)
 
-[Live version]([https://resetdel.github.io/space-enemies/](https://resetdel.github.io/gemini-space-shooter/))
+[Live version](https://resetdel.github.io/gemini-space-shooter/)
 
 1. Introduction
 
